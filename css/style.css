@@ -38,7 +38,9 @@ a.next {
   color: white;
   padding: 0.5em 1em;
   border: 1px solid white;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 0.5em 0;
+  display: inline-block; }
   a.next:hover {
     background: white;
     color: #5F4273; }
