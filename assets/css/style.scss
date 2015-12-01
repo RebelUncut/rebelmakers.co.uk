@@ -50,6 +50,8 @@ a.next {
 	padding: 0.5em 1em;
 	border: 1px solid white;
 	text-decoration: none;
+	margin: 0.5em 0;
+	display: inline-block;
 	&:hover {
 		background: white;
 		color: $color_accent;
