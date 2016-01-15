@@ -1,13 +1,95 @@
 extends layout
 
+block vars
+    - var pageTitle = "Home"
+    - var pageClass = "home"
+
 block content
-    .page
-        .content
-            .inner
-                a.logo(href="http://rebeluncut.co.uk")
-                    img(src="/img/logo-white.png")
-                h1 Rebel Makers
-                h2 Rebel Makers is a monthly club for everyone who's interested in programming, electronics and digital production - regardless of age or skill level.
-                a.next(href="https://www.eventbrite.co.uk/e/rebel-makers-early-january-2015-tickets-19800126712") Next club is on January 9th 2016
-                br
-                a.next(href="https://www.eventbrite.co.uk/e/rebel-makers-late-january-2016-tickets-19800217985") Following club is on January 30th 2016
+
+    .wrapper.outer
+
+        section#what
+
+            :marked
+                # We are a set of peer-to-peer making clubs for everyone.
+
+                Rebel Makers Clubs are monthly meetups for everyone who is interested in programming, electronics, and digital production - regardless of age or ability.  At our clubs, Rebels get together to share existing knowledge and learn new skills in a fun, safe and collaborative environment, exploring anything and everything from development to digital production to service design. 
+
+                The main aim of Rebel Makers is to break down barriers with technology, bringing lots of different people together, ultimately helping them to achieve and improve in whatever way they want to - be it share skills, meet new people, improve prospects, or even just come play with some fun stuff every month.
+
+                You're free to bring a project to work on, ideas of specific skills you'd like to share or learn, or simply come along and see what you fancy working on. 
+
+
+                # Who is Rebel Makers for?
+
+                Everyone. And we really do mean that. Rebel Makers is for people of all ages, abilities and backgrounds.
+
+                So far, we've brought together people aged 5 to 72, those who simply think tech is kinda cool to those with pretty serious skills, and everyone in between. We actively encourage you all to become Rebels.  
+
+    section#ethos.core
+        ul.core
+            .wrapper.outer
+                h1 Our core values
+                li
+                    h3 Safe
+                    p Regardless of your age, orientation or background, Rebel Makers will always be a safe space for you to learn and grow. 
+                li
+                    h3 Free
+                    p Our commitment to opening up opportunities for all means Rebel Makers Clubs are - and will always be - free to attend. 
+                li
+                    h3 Collaborative
+                    p Every Rebel has as much to give as they have to gain, that's why creating a collaborative environment is so important to us. 
+            .follow-on.wrapper.outer
+                a.more(href="/ethos") Learn more about our ethos
+
+    .wrapper.outer
+
+        section#features
+            h1 What to expect at a Rebel Makers Club?
+            ul
+                h2 Every club
+                li
+                    img(src="/img/skills.svg")
+                    .content
+                    h3 Skills exchange
+                    p Gain validation by sharing knowledge you already have while learning and experimenting with new skills and tech. 
+                li
+                    img(src="/img/projects-single.svg")
+                    .content
+                    h3 Work on projects
+                    p If you've got a project which you want to start or continue, use our clubs as a great space to be productive and get support.
+                li
+                    img(src="/img/community.svg")
+                    .content
+                        h3 Awesome community
+                        p Joining the Rebellion means meeting, learning and sharing with lots of brilliant, like-minded people.
+            ul
+                h2 Opt-in
+                li
+                    img(src="/img/projects-group.svg")
+                    .content
+                        h3 Group projects
+                        p These will be on-going and decided by each Club as a whole, giving every Rebel the chance to work on and interact with a shared project. 
+                li
+                    img(src="/img/hw-hub.svg")
+                    .content
+                        h3 Hardware hub
+                        p Exploring tech is a great way to discover new skills and interests. Hardware Hubs will offer a variety of kit and gadgets for Rebels to experiment with.
+                li
+                    img(src="/img/workshops.svg")
+                    .content
+                        h3 Workshops
+                        p Workshops are great ways to give deeper insight into specific areas of the tech world, or kickstart new skills. Anyone can offer to run a workshop, and diversity is encouraged.
+
+    section#community
+        .wrapper.outer
+            h1 We are a community 
+            h2 It's hugely important to us that Rebel Makers is and always will be grounded in and driven by the community. We are a democracy, where every Rebel has an equal voice to decide how the Clubs will be structured and what direction we take Rebel Makers in the future. 
+
+            .links
+                .link
+                    p Want some super-social, chilled back chat?
+                    a.button(href="http://rebelmakers.slack.com", target="_blank") #[i.fa.fa-slack] Slack Chat
+                .link
+                    p Asking for help, or want info about your club?
+                    a.button.disabled(href="") #[i.fa.fa-comment] Discussion Hub (coming soon)

@@ -1,65 +1,465 @@
-$color_accent: #5F4273;
-$color_light-grey: #EEEDED;
-$color_dark-grey: #3B4746;
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+
+$purple: #543968;
+$pink: #E91E63;
+
+// Base 
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "futura-pt", sans-serif !important;
+	}
+
+	body {
+		font-size: 18px;
+	}
+
+	.wrapper {
+		@include outer-container;
+		&.outer {
+			padding: 0 $column + $gutter;
+		}
+	}
+
+	@mixin button($color: $purple) {
+		background: $color;
+		color: white;
+		padding: 0.5em 1em;
+		display: inline-block;
+		@include transition;
+		&:hover {
+			background:darken($color, 10%);
+			@include transition;
+		}
+	}
+
+// Header
+
+	.parallax-mirror {
+		background: $purple;
+		img {
+			opacity: 0.25;
+		}
+	}
+
+	header {
+		padding: 2em 0;
+		.flex {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		.copy {
+			padding-bottom: 1em;
+		}
+		h1,
+		h2 {
+			color: white;
+			margin: 0 0 0 2rem;
+			font-size: 1.5rem;
+			font-weight: normal;
+			a {
+				text-decoration: underline;
+				color: inherit;
+				&:hover,
+				&:active,
+				&:focus {
+					color: white;
+				}
+			}
+		}
+		h2 {
+			font-size: 1em;
+			margin-top: 0.75em;
+		}
+		img {
+			height: 4em;
+		}
+		body.home & {
+			padding: 20vh 0;
+			img {
+				height: 20vh;
+			}
+			h1, 
+			h2 {
+				font-size: 2rem;
+				margin-left: 3rem;
+			}
+			h2 {
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	ul.nav {
+		background: $purple;
+		width: 100%;
+		padding: 1em;
+		margin-bottom: 3rem;
+		a {
+			color: white;
+		}
+		li {
+			display: inline;
+			margin-right: 1em;
+		}
+	}
+
+// List
+
+%icon-list {
+	@include span-columns(12);
+	padding: $gutter;
+	h2 {
+		font-size: 1.5em;
+	}
+	li {
+		@include span-columns(4 of 12);
+		img {
+			@include span-columns(1.5 of 4);
+			margin-bottomx: 1em;
+		}
+		h3, p {
+			@include span-columns(4 of 4);
+		}
+		h3 {
+			font-size: 2.25rem;
+			font-family: "akula", sans-serif !important;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	&.core {
+		background: $pink;
+		* {
+			color: white;
+		}
+	}
+	.follow-on {
+		display: flex;
+		justify-content: flex-start;
+	}
+	a.more {
+		text-align: center;
+		margin-top: 1.5em;
+		margin-bottom: 0.5em;
+		display: block;
+		background: white;
+		color: $pink;
+		padding: 0.5em 1em;
+	}
+}
+
+section#ethos {
+	@extend %icon-list;
+	margin-top: 2em;
+}
+
+section#features {
+	h1 {
+		@include span-columns(12);
+		margin-top: 1em;
+	}
+	ul {
+		@include span-columns(6 of 12);
+		margin-bottom: 2rem;
+		h2 {
+			font-size: 1.5em;
+		}
+		li {
+			img {
+				float: left;
+				height: 2.5rem;
+			}
+			.content{
+				float: left;
+				width: 100%;
+				margin-top: 0.75em;
+			}
+			h3 {
+				border-bottom: 2px solid $purple;
+				float: left;
+				padding-bottom: 0.25em;
+				color: $purple;
+				margin-bottom: 0.25em;
+			}
+			p {
+				width: 100%;
+				float: left;
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+}
+
+section#community {
+	background: 
+		linear-gradient(
+			to top,
+			rgba($purple, 1),
+			transparent),
+			url(/img/footer.jpg) center scroll;
+		background-size: cover;
+		padding: 4em 0 8em;
+	* {
+		color: white;
+	}
+	h1 {
+		margin-bottom: 0.5rem;
+		font-size: 3rem;
+		font-family: "akula", sans-serif !important;
+	}
+	h2 {
+		font-weight: normal;
+		font-size: 1.25em;
+	}
+	.links {
+		@include span-columns(12);
+		.link {
+			@include span-columns(6 of 12);
+			p {
+				margin-bottom: 1em;
+				display: block;
+			}
+			a {
+				background: white;
+				color: $purple;
+				padding: 0.5em 0.75em;
+				&.disabled {
+					background: #B6B6B5;
+					cursor: default;
+					pointer-events: none;
+				}
+			}
+			i {
+				font-family: "FontAwesome" !important;
+				color: $purple;
+				font-size: 0.9em;
+				margin-right: 0.5em;
+			}
+		}
+	}
+}
+
+footer {
+	background: $purple;
+	padding: 1.5em 0;
+	.flex {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	a.logo {
+		display: block;
+	}
+	img {
+		height: 3rem;
+		display: block;
+	}
+	ul {
+		margin-top: 0;
+		margin-bottom: 0;
+		align-self: center;
+		li {
+			display: inline;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-left: 1em;
+			a,
+			a:hover,
+			a:active {
+				color: white;
+			}
+		}
+	}
+}
 
 body {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-	font-family: "futura-pt", sans-serif;
-	background: url(/img/bg.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	color: white;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .page {
-	flex: 1;
+  flex: 1;
 }
 
-.content {
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.inner {
-	width: 60%;
-	text-align: center;
-}
-
-a.logo img {
-	width: 100px;
-}
+// Page
 
 h1 {
-	font-size: 2.5em;
+	font-size: 2em;
 }
 
-h2 {
-	font-weight: 400;
-	margin-bottom: 2em;
-}
-
-a.next {
-	color: white;
-	padding: 0.5em 1em;
-	border: 1px solid white;
-	text-decoration: none;
-	margin: 0.5em 0;
-	display: inline-block;
-	&:hover {
-		background: white;
-		color: $color_accent;
+.page-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	h1 {
+		border-bottom: 2px solid $pink;
+		color: $pink;
+		font-size: 2.5rem;
+		margin-bottom: 1em;
 	}
 }
 
-@media screen and (max-width: 800px) {
-	.inner {
-		width: 90%;
+#what,
+#copy {
+	h1:not(:first-child) {
+		margin-top: 0.75em;
 	}
+}
+
+#copy {
+	margin-bottom: 2.5em;
+	ul {
+		margin-bottom: 1em;
+		li {
+			list-style-type: disc;
+			margin-left: 20px;
+		}
+	}
+}
+
+#ethos {
+	margin-top: 1em;
+	@include span-columns(12);
+}
+
+// Clubs
+
+#key {
+	ul {
+		@include span-columns(12);
+		margin-bottom: 2.5rem;
+		li {
+			@include span-columns(4);
+			@include omega(3n);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			img {
+				display: inline;
+				height: 1em;
+			}
+			p {
+				display: inline;
+				margin-bottom: 0;
+				&:before {
+					content: "=";
+					margin: 0 0.5em;
+				}
+			}
+		}
+	}
+}
+
+#clubs {
+	> ul {
+		> li {
+			@include span-columns(12);
+			margin-bottom: 3rem;
+			.img {
+				@include span-columns(4 of 12);
+				img {
+					width: 100%;
+				}
+			}
+			.content {
+				@include span-columns(8 of 12);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				.name {
+					font-size: 1.75em;
+					font-weight: bold;
+					margin-bottom: 0.75rem;
+					line-height: 0.8;
+				}
+				.loc {
+					margin-top: 0;
+					margin-bottom: 0.25em;
+				}
+				.desc {
+					margin-top: 0;
+					a {
+						color: $pink;
+						text-decoration: underline;
+					}
+				}
+				.id {
+					display: none;
+				}
+				ul.incl {
+					@include span-columns(8 of 8);
+					margin-bottom: 1em;
+					@mixin club-icon($name) {
+						&.#{$name} {
+							background-image: url(/img/#{$name}.svg);
+						}
+					}
+					li {
+						@include span-columns(8 of 8);
+						height: 1em;
+						width: 1em;
+						background-size: contain;
+						background-repeat: no-repeat;
+						@include club-icon(skills);
+						@include club-icon(projects-single);
+						@include club-icon(community);
+						@include club-icon(projects-group);
+						@include club-icon(hw-hub);
+						@include club-icon(workshops);
+					}
+				}
+				.flex {
+					@include span-columns(8 of 8);
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-start;
+					align-self: flex-end;
+					a.eventbrite {
+						color: white;
+						background: $pink;
+						padding: 0.5em 0.75em;
+					}
+					a.contact {
+						align-self: center;
+						color: $pink;
+						margin-left: 1em;
+						text-decoration: underline;
+						&:hover,
+						&:focus {
+							color: $pink;
+						}
+					}
+				}
+			}
+		}
+	}
+	#new-club h2 {
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin-bottom: 3rem;
+		font-size: 2.25rem;
+		font-weight: normal;
+		a {
+			color: $pink;
+			text-decoration: underline;
+		}
+	}
+}
+
+// Edge
+
+a.email-us {
+	@include button($pink);
+	font-size: 1.25em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }

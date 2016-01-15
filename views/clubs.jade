@@ -1,0 +1,56 @@
+extends layout
+
+block vars
+	- var pageTitle = "Clubs"
+	- var pageClass = "clubs"
+
+block content
+
+	.wrapper.outer
+
+		.page-title 
+			h1 Clubs
+
+		section#key
+			ul
+				li
+					img(src="/img/skills.svg")
+					p Skills exchange
+				li
+					img(src="/img/projects-single.svg")
+					p Work on projects
+				li
+					img(src="/img/community.svg")
+					p Awesome community
+				li
+					img(src="/img/projects-group.svg")
+					p Group projects
+				li
+					img(src="/img/hw-hub.svg")
+					p Hardware hub
+				li
+					img(src="/img/workshops.svg")
+					p Workshops
+
+		section#clubs
+			ul
+				li
+					.img.match
+						img(src="/img/bg.jpg")
+					.content.match
+						p.name Rebel Uncut HQ
+						p.loc Jewellery Quarter, Birmingham
+						p.desc The head office of #[a(href="http://rebeluncut.co.uk", target="_blank") Rebel Uncut], a digital agency based in Brum.
+						small.id 8441565195
+						ul.incl
+							li.skills
+							li.projects-single
+							li.community
+							li.projects-group
+							li.hw-hub
+							li.workshops
+						.flex
+							a.eventbrite(href="http://www.eventbrite.co.uk/o/rebel-uncut-8441565195") Next event is #[span.date]
+							a.contact(href="mailto:kevin@rebeluncut.co.uk") Contact Rebel Leader
+			#new-club
+				h2 Want to set up a new club? #[a(href="/new") Find out more]
