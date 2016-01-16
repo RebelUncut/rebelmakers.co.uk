@@ -418,6 +418,15 @@ footer {
       footer ul li a:hover,
       footer ul li a:active {
         color: white; }
+  footer #join h2 {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: "Bangers", sans-serif !important;
+    font-size: 2em;
+    margin-top: 3rem;
+    font-weight: normal;
+    letter-spacing: 0.025em; }
 
 body {
   display: flex;
