@@ -202,7 +202,7 @@ body {
     padding: 0 5.8538em; }
 
 .parallax-mirror {
-  background: #543968; }
+  background: #E91E63; }
   .parallax-mirror img {
     opacity: 0.25; }
 
@@ -246,7 +246,7 @@ header {
       font-size: 1.5rem; }
 
 ul.nav {
-  background: #543968;
+  background: #E91E63;
   width: 100%;
   padding: 1em;
   margin-bottom: 3rem; }
@@ -294,7 +294,7 @@ section#ethos {
     section#ethos li p {
       margin-bottom: 0; }
   section.core#ethos {
-    background: #E91E63; }
+    background: #543968; }
     section.core#ethos * {
       color: white; }
   section#ethos .follow-on {
@@ -306,7 +306,7 @@ section#ethos {
     margin-bottom: 0.5em;
     display: block;
     background: white;
-    color: #E91E63;
+    color: #543968;
     padding: 0.5em 1em; }
 
 section#ethos {
@@ -339,10 +339,10 @@ section#features ul {
     width: 100%;
     margin-top: 0.75em; }
   section#features ul li h3 {
-    border-bottom: 2px solid #543968;
+    border-bottom: 2px solid #E91E63;
     float: left;
     padding-bottom: 0.25em;
-    color: #543968;
+    color: #E91E63;
     margin-bottom: 0.25em; }
   section#features ul li p {
     width: 100%;
@@ -350,7 +350,7 @@ section#features ul {
     margin-bottom: 1.5em; }
 
 section#community {
-  background: linear-gradient(to top, #543968, transparent), url(/img/footer.jpg) center scroll;
+  background: linear-gradient(to top, #e91e63, transparent), url(/img/footer.jpg) center scroll;
   background-size: cover;
   padding: 4em 0 8em; }
   section#community * {
@@ -381,7 +381,7 @@ section#community {
         display: block; }
       section#community .links .link a {
         background: white;
-        color: #543968;
+        color: #E91E63;
         padding: 0.5em 0.75em; }
         section#community .links .link a.disabled {
           background: #B6B6B5;
@@ -389,12 +389,12 @@ section#community {
           pointer-events: none; }
       section#community .links .link i {
         font-family: "FontAwesome" !important;
-        color: #543968;
+        color: #E91E63;
         font-size: 0.9em;
         margin-right: 0.5em; }
 
 footer {
-  background: #543968;
+  background: #E91E63;
   padding: 1.5em 0; }
   footer .flex {
     display: flex;
@@ -418,15 +418,6 @@ footer {
       footer ul li a:hover,
       footer ul li a:active {
         color: white; }
-  footer #join h2 {
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-family: "Bangers", sans-serif !important;
-    font-size: 2em;
-    margin-top: 3rem;
-    font-weight: normal;
-    letter-spacing: 0.025em; }
 
 body {
   display: flex;
@@ -444,14 +435,17 @@ h1 {
   flex-direction: row;
   justify-content: flex-start; }
   .page-title h1 {
-    border-bottom: 2px solid #E91E63;
-    color: #E91E63;
+    border-bottom: 2px solid #543968;
+    color: #543968;
     font-size: 2.5rem;
     margin-bottom: 1em; }
 
 #what h1:not(:first-child),
 #copy h1:not(:first-child) {
   margin-top: 0.75em; }
+
+#what h2 {
+  font-size: 1.5em; }
 
 #copy {
   margin-bottom: 2.5em; }
@@ -540,7 +534,7 @@ h1 {
     #clubs > ul > li .content .desc {
       margin-top: 0; }
       #clubs > ul > li .content .desc a {
-        color: #E91E63;
+        color: #543968;
         text-decoration: underline; }
     #clubs > ul > li .content .id {
       display: none; }
@@ -588,15 +582,15 @@ h1 {
         margin-right: 0; }
       #clubs > ul > li .content .flex a.eventbrite {
         color: white;
-        background: #E91E63;
+        background: #543968;
         padding: 0.5em 0.75em; }
       #clubs > ul > li .content .flex a.contact {
         align-self: center;
-        color: #E91E63;
+        color: #543968;
         margin-left: 1em;
         text-decoration: underline; }
         #clubs > ul > li .content .flex a.contact:hover, #clubs > ul > li .content .flex a.contact:focus {
-          color: #E91E63; }
+          color: #543968; }
 
 #clubs #new-club h2 {
   width: 100%;
@@ -606,11 +600,11 @@ h1 {
   font-size: 2.25rem;
   font-weight: normal; }
   #clubs #new-club h2 a {
-    color: #E91E63;
+    color: #543968;
     text-decoration: underline; }
 
 a.email-us {
-  background: #E91E63;
+  background: #543968;
   color: white;
   padding: 0.5em 1em;
   display: inline-block;
@@ -621,7 +615,7 @@ a.email-us {
   margin-top: 1em;
   margin-bottom: 1em; }
   a.email-us:hover {
-    background: #c1134e;
+    background: #392747;
     -webkit-transition: all 0.15s ease-out 0s;
     -moz-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s; }
