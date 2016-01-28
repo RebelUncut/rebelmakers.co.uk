@@ -5,7 +5,7 @@
 $pink: #543968;
 $purple: #E91E63;
 
-// Base 
+// Base
 
 	* {
 		margin: 0;
@@ -84,7 +84,7 @@ $purple: #E91E63;
 			img {
 				height: 20vh;
 			}
-			h1, 
+			h1,
 			h2 {
 				font-size: 2rem;
 				margin-left: 3rem;
@@ -198,7 +198,7 @@ section#features {
 }
 
 section#community {
-	background: 
+	background:
 		linear-gradient(
 			to top,
 			rgba($purple, 1),
@@ -312,6 +312,10 @@ h1 {
 	h1:not(:first-child) {
 		margin-top: 0.75em;
 	}
+}
+
+#what h2 {
+	font-size: 1.5em;
 }
 
 #copy {
