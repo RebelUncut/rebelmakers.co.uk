@@ -30,3 +30,7 @@ $("#clubs > ul > li").each(function() {
 		}
 	});
 });
+
+$("ul.nav .toggle-menu").click(function() {
+	$("ul.nav li").slideToggle();
+});

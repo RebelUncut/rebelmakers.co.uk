@@ -255,6 +255,8 @@ ul.nav {
   ul.nav li {
     display: inline;
     margin-right: 1em; }
+  ul.nav .toggle-menu {
+    display: none; }
 
 section#ethos {
   float: left;
@@ -418,6 +420,15 @@ footer {
       footer ul li a:hover,
       footer ul li a:active {
         color: white; }
+  footer #join h2 {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: "Bangers", sans-serif !important;
+    font-size: 2em;
+    margin-top: 3rem;
+    font-weight: normal;
+    letter-spacing: 0.025em; }
 
 body {
   display: flex;
@@ -445,7 +456,7 @@ h1 {
   margin-top: 0.75em; }
 
 #what h2 {
-  font-size: 1.5em; }
+  font-size: 1.5rem; }
 
 #copy {
   margin-bottom: 2.5em; }
@@ -619,5 +630,102 @@ a.email-us {
     -webkit-transition: all 0.15s ease-out 0s;
     -moz-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s; }
+
+@media screen and (max-width: 960px) {
+  .wrapper.outer {
+    width: 100%;
+    padding: 0 2em; }
+  h1 {
+    font-size: 1.5rem; }
+  .parallax-mirror img {
+    opacity: 0; }
+  body.home header {
+    padding: 2rem 0 1rem 0;
+    background: #E91E63 !important; }
+    body.home header img {
+      height: 3em; }
+    body.home header h1 {
+      font-size: 1.25rem; }
+    body.home header h2 {
+      font-size: 1rem; }
+    body.home header h1,
+    body.home header h2 {
+      text-align: center;
+      margin-left: 0; }
+    body.home header .flex {
+      flex-direction: column; }
+  ul.nav {
+    margin-bottom: 2rem;
+    text-align: center;
+    background: #543968; }
+    ul.nav .toggle-menu {
+      display: block; }
+      ul.nav .toggle-menu a {
+        border: 2px solid white;
+        padding: 0.5em 0.75em;
+        display: inline-block;
+        font-size: 0.75em; }
+        ul.nav .toggle-menu a:hover, ul.nav .toggle-menu a:focus, ul.nav .toggle-menu a:active {
+          background: white;
+          color: #543968; }
+    ul.nav .wrapper.outer {
+      padding: 0 1rem; }
+    ul.nav li {
+      display: block;
+      padding: 0.5rem;
+      margin-right: 0;
+      display: none; }
+      ul.nav li:first-child {
+        margin-top: 1em; }
+  #what p:last-child {
+    margin-bottom: 0; }
+  #ethos.core ul .wrapper.outer {
+    padding: 0; }
+    #ethos.core ul .wrapper.outer li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #ethos.core ul .wrapper.outer li:last-child {
+        margin-right: 0; }
+      #ethos.core ul .wrapper.outer li h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem; }
+      #ethos.core ul .wrapper.outer li:nth-child(2) h3 {
+        margin-top: 1rem; }
+  section#features h1 {
+    margin-top: 2rem; }
+  section#features ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-bottom: 1rem; }
+    section#features ul:last-child {
+      margin-right: 0; }
+    section#features ul h2 {
+      display: none; }
+    section#features ul:nth-child(2) {
+      margin-bottom: 0; }
+  section#community {
+    padding: 2rem 0 4rem; }
+    section#community h1 {
+      font-size: 2rem; }
+    section#community h2 {
+      font-size: 1.25rem; }
+    section#community .links .link {
+      width: 100%; }
+      section#community .links .link p {
+        font-size: 1rem; }
+      section#community .links .link:first-child {
+        margin-bottom: 1rem; }
+  footer .flex {
+    flex-direction: column;
+    font-size: 1rem; }
+    footer .flex .logo {
+      display: none; }
+  footer #join h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem; } }
 
  /*# sourceMappingURL=style.css.map */
