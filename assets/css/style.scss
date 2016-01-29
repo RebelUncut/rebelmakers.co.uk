@@ -2,10 +2,12 @@
 @import "neat/neat";
 @import "base/base";
 
+// These are the wrong way around because Kevin didn't abstract variables out enough
+
 $pink: #543968;
 $purple: #E91E63;
 
-// Base
+// Base 
 
 	* {
 		margin: 0;
@@ -84,7 +86,7 @@ $purple: #E91E63;
 			img {
 				height: 20vh;
 			}
-			h1,
+			h1, 
 			h2 {
 				font-size: 2rem;
 				margin-left: 3rem;
@@ -106,6 +108,9 @@ $purple: #E91E63;
 		li {
 			display: inline;
 			margin-right: 1em;
+		}
+		.toggle-menu {
+			display: none;
 		}
 	}
 
@@ -198,7 +203,7 @@ section#features {
 }
 
 section#community {
-	background:
+	background: 
 		linear-gradient(
 			to top,
 			rgba($purple, 1),
@@ -277,6 +282,16 @@ footer {
 			}
 		}
 	}
+	#join h2 {
+		width: 100%;
+		text-align: center;
+		color: white;
+		font-family: "Bangers", sans-serif !important;
+		font-size: 2em;
+		margin-top: 3rem;
+		font-weight: normal;
+		letter-spacing: 0.025em;
+	}
 }
 
 body {
@@ -315,7 +330,7 @@ h1 {
 }
 
 #what h2 {
-	font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 #copy {
@@ -459,7 +474,7 @@ h1 {
 	}
 }
 
-// Edge
+// Ethos
 
 a.email-us {
 	@include button($pink);
@@ -467,3 +482,6 @@ a.email-us {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
+
+
+@import "res-tablet.scss";
