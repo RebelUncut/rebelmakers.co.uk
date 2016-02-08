@@ -632,6 +632,9 @@ a.email-us {
     -moz-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s; }
 
+.bangers {
+  font-family: "Bangers", sans-serif !important; }
+
 @media screen and (max-width: 960px) {
   .wrapper.outer {
     width: 100%;

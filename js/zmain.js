@@ -14,12 +14,14 @@ $("header").parallax({
 
 $("#clubs .match").matchHeight();
 
-var eventbriteToken = "4V67L4JUEJAOGLKE2VBT";
+var eventbriteToken = "JVAOXWZE4KHOZP24TO2J";
 
 $("#clubs > ul > li").each(function() {
 	var element = $(this);
 	var organiserId = $(this).find(".id").html();
-	$.getJSON("https://www.eventbriteapi.com/v3/events/search/?token=" + eventbriteToken + "&organizer.id=" + organiserId + "&expand=venue", function(data) {
+	var apiCall = "https://www.eventbriteapi.com/v3/events/search/?token=" + eventbriteToken + "&organizer.id=" + organiserId + "&expand=venue";
+	console.log(apiCall);
+	$.getJSON(apiCall, function(data) {
 		var eventsUpcoming = data.events.length;
 		if(eventsUpcoming < 1) {
 			element.find(".date").html("not planned yet.");
