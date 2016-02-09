@@ -15,7 +15,7 @@
 			opacity: 0;
 		}
 
-		body.home header {
+		header {
 			padding: 2rem 0 1rem 0;
 			background: $purple !important;
 			img {
@@ -145,11 +145,50 @@
 					display: none;
 				}
 			}
+			ul {
+				text-align: center;
+			}
 			#join h2 {
 				font-size: 1.5rem;
 				margin-top: 1rem;
 			}
 		}
+	
+	// Clubs
+	
+	#key {
+		display: none
+	}
+	
+	#clubs {
+		> ul > li {
+			display: flex;
+			flex-direction: column;
+			.img {
+				display: none;
+			}
+			.content {
+				width: 100% !important;
+				.flex {
+					flex-direction: column;
+					a.eventbrite {
+						color: $pink;
+						background: white;
+						font-weight: bold;
+						padding: 0 0.5em 0.5em 0;
+					}
+					a.contact {
+						align-self: flex-start;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+		#new-club h2 {
+			font-size: 1.25em;
+			text-align: left;
+		}
+	}
 
 }
 
